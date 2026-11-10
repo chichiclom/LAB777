@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Адаптивная галерея изображений с горизонтальным слайдером.">
+    <title>Галерея изображений</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="my.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <p class="eyebrow">Коллекция изображений</p>
+            <h1>Галерея путешествий</h1>
+            <p class="subtitle">Восемь мест, которые хочется увидеть</p>
+        </header>
+
+        <section class="gallery" aria-label="Галерея изображений">
+            <button class="gallery-button gallery-button--prev" type="button"
+                    aria-label="Предыдущая страница" id="prevButton">
+                <span aria-hidden="true">&#10094;</span>
+            </button>
+
+            <div class="gallery-window" id="galleryWindow">
+                <div class="gallery-track" id="galleryTrack">
+                    <figure class="gallery-item"><img src="images/image1.svg" alt="Горные вершины"><figcaption>Горные вершины</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image2.svg" alt="Морское побережье"><figcaption>Морское побережье</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image3.svg" alt="Лесное озеро"><figcaption>Лесное озеро</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image4.svg" alt="Пустыня"><figcaption>Пустыня</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image5.svg" alt="Зимний лес"><figcaption>Зимний лес</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image6.svg" alt="Цветущие поля"><figcaption>Цветущие поля</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image7.svg" alt="Закат в горах"><figcaption>Закат в горах</figcaption></figure>
+                    <figure class="gallery-item"><img src="images/image8.svg" alt="Тропический остров"><figcaption>Тропический остров</figcaption></figure>
+                </div>
+            </div>
+
+            <button class="gallery-button gallery-button--next" type="button"
+                    aria-label="Следующая страница" id="nextButton">
+                <span aria-hidden="true">&#10095;</span>
+            </button>
+        </section>
+
+        <nav class="pager" aria-label="Страницы галереи">
+            <button class="pager-arrow" type="button" id="pagerPrev" aria-label="Предыдущая страница">&#10094;</button>
+            <div class="pager-pages" id="pagerPages" aria-live="polite"></div>
+            <button class="pager-arrow" type="button" id="pagerNext" aria-label="Следующая страница">&#10095;</button>
+        </nav>
+        <p class="page-counter" id="pageCounter">Страница 1 из 3</p>
+    </main>
+</body>
+</html>
